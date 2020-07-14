@@ -364,13 +364,17 @@ header .head-side {
     border-radius:50%;
 }
 .friend-icon-name {
-    width:160px;
+    width:60%;
     font-size:14px;
     margin: auto;
     color:#224b7a;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.friend-icon-name-search {
+    width:160px;
 }
 
 .friend-icon-name-empty {

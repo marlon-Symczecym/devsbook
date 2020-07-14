@@ -27,7 +27,7 @@
                                 <div class="friend-icon-avatar">
                                     <img src="<?=$base?>/media/avatars/<?=$user->avatar;?>" />
                                 </div>
-                                <div class="friend-icon-name">
+                                <div class="friend-icon-name-search">
                                     <?=$user->name?>
                                 </div>
                             </a>
