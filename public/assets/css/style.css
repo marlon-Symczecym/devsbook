@@ -322,6 +322,10 @@ header .head-side {
     color:#999;
 }
 
+.profile-info-item a {
+    text-decoration: none;
+}
+
 .user-info-mini {
     display:flex;
     align-items: center;
@@ -411,6 +415,7 @@ header .head-side {
 }
 .full-user-photos .user-photo-item {
     margin:0;
+    max-width: 100%;
 }
 
 .button {
