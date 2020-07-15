@@ -1,4 +1,4 @@
-<div class="box feed-item">
+<div class="box feed-item" data-id="<?=$data->id?>">
     <div class="box-body">
         <div class="feed-item-head row mt-20 m-width-20">
             <div class="feed-item-head-photo">
@@ -42,18 +42,20 @@
             <div class="msg-btn"><?=count($data->comments);?></div>
         </div>
         <div class="feed-item-comments">
-            
-            <!--
-            <div class="fic-item row m-height-10 m-width-20">
-                <div class="fic-item-photo">
-                    <a href=""><img src="<?=$base?>/media/avatars/default.jpg" /></a>
+            <div class="feed-item-comments-area">
+                <?php foreach($data->comments as $item): ?>
+                <div class="fic-item row m-height-10 m-width-20">
+                    <div class="fic-item-photo">
+                        <a href="<?=$base?>/perfil/<?=$item['user']['id']?>"><img src="<?=$base?>/media/avatars/<?=$item['user']['avatar']?>" /></a>
+                    </div>
+                    <div class="fic-item-info">
+                        <a href="<?=$base?>/perfil/<?=$item['user']['id']?>"><?=strtolower($item['user']['name'])?></a>
+                        <?=$item['body']?>
+                    </div>
                 </div>
-                <div class="fic-item-info">
-                    <a href="">marlon symczecym</a>
-                    Comentando no meu próprio post
-                </div>
+                <?php endforeach; ?>
             </div>
-            -->
+           
 
             <div class="fic-answer row m-height-10 m-width-20">
                 <div class="fic-item-photo">
