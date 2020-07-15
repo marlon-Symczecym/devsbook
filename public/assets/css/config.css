@@ -1,0 +1,58 @@
+form.config {
+    width: 100%;
+    margin: auto;
+    background-color: #FFF;
+    border-radius:5px;
+    padding:20px;
+    margin-top:50px;
+}
+form.config label {
+    display: block;
+}
+form.config input {
+    display: block;
+}
+form.config .input-text,
+.input-email,
+.input-password {
+    font-size:15px;
+    height:40px;
+    width: 100%;
+    outline: 0;
+    border:0;
+    background-color:#EEE;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:10px;
+}
+form.config .input:focus {
+    background-color:#DDD;
+}
+form.config .button {
+    border:0;
+    padding:10px 20px;
+    background-color:#4a76a8;
+    border-radius:10px;
+    color:#FFF;
+    font-size:15px;
+    margin-bottom:10px;
+    cursor:pointer;
+    box-shadow:0px 0px 3px #999;
+}
+form.config .button:hover {
+    background-color:#477dbb;
+}
+form.config a {
+    text-decoration:none;
+    color:#4a76a8;
+}
+
+.flash {
+    text-align: center;
+    color: rgb(238, 216, 216); 
+    font-size: 18px;
+    background-color: rgb(185, 48, 48); 
+    padding: 6px 5px; 
+    border-radius: 5px; 
+    margin-bottom: 15px;
+}

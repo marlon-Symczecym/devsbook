@@ -36,6 +36,7 @@ class LoginController extends Controller
                 $this->redirect('/');
             } else {
                 $_SESSION['flash'] = 'E-mail e/ou senha não conferem!';
+                $_SESSION['message'] = 'error';
                 $this->redirect('/login');
             }
 
@@ -70,6 +71,7 @@ class LoginController extends Controller
             $birthdate = explode('/', $birthdate);
             if(count($birthdate) != 3) {
                 $_SESSION['flash'] = 'Data de nascimento inválida!';
+                $_SESSION['message'] = 'error';
                 $this->redirect('/cadastro');
             }
 
@@ -77,6 +79,7 @@ class LoginController extends Controller
 
             if(strtotime($birthdate) === false) {
                 $_SESSION['flash'] = 'Data de nascimento inválida!';
+                $_SESSION['message'] = 'error';
                 $this->redirect('/cadastro');
             }
 
@@ -87,6 +90,7 @@ class LoginController extends Controller
                 $this->redirect('/');
             } else {
                 $_SESSION['flash'] = 'E-mail já cadastrado';
+                $_SESSION['message'] = 'error';
                 $this->redirect('/cadastro');
             }
 

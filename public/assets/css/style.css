@@ -449,6 +449,31 @@ header .head-side {
     background-color:#477dbb;
 }
 
+.message {
+    text-align: center;
+    font-size: 18px;
+    padding: 6px 5px; 
+    border-radius: 5px; 
+    margin-bottom: 15px;
+}
+.error {
+    color: white; 
+    background-color: rgb(185, 48, 48); 
+}
+
+.success {
+    color: white; 
+    background-color: rgb(48, 185, 105); 
+}
+
+form label.label {
+    display: block;
+    font-size: 16px;
+    color: #4a76a8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 992px) {
     header .head-side-right {
         display:none !important;

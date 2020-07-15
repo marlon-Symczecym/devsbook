@@ -22,6 +22,11 @@ class UserHandler
                 $loggedUser->id = $data['id'];
                 $loggedUser->name = strtolower($data['name']);
                 $loggedUser->avatar = $data['avatar'];
+                $loggedUser->email = $data['email'];
+                $loggedUser->birthdate = $data['birthdate'];
+                $loggedUser->work = $data['work'];
+                $loggedUser->city = $data['city'];
+
 
                 return $loggedUser;
             }
@@ -74,6 +79,7 @@ class UserHandler
             $user = new User();
             $user->id = $data['id'];
             $user->name = $data['name'];
+            $user->email = $data['email'];
             $user->birthdate = $data['birthdate'];
             $user->city = $data['city'];
             $user->work = $data['work'];
@@ -185,6 +191,65 @@ class UserHandler
         }
 
         return $users;
+    }
+
+    public static function updatePassword($id, $password) {
+        
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+
+        User::update()
+            ->set('password', $hash,)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateName($id, $name) {
+        User::update()
+            ->set('name', $name)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateBirthdate($id, $birthdate) {
+        User::update()
+            ->set('birthdate', $birthdate)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateEmail($id, $email) {
+        User::update()
+            ->set('email', $email)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateCity($id, $city) {
+        User::update()
+            ->set('city', $city)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateWork($id, $work) {
+        User::update()
+            ->set('work', $work)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateAvatar($id, $avatarName) {
+        User::update()
+            ->set('avatar', $avatarName)
+            ->where('id', $id)
+        ->execute();
+    }
+
+    public static function updateCover($id, $coverName) {
+        User::update()
+            ->set('cover', $coverName)
+            ->where('id', $id)
+        ->execute();
     }
 
 }

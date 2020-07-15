@@ -84,12 +84,19 @@ form a {
     color:#4a76a8;
 }
 
-.flash {
+.message {
     text-align: center;
-    color: rgb(238, 216, 216); 
     font-size: 18px;
-    background-color: rgb(185, 48, 48); 
     padding: 6px 5px; 
     border-radius: 5px; 
     margin-bottom: 15px;
+}
+.error {
+    color: white; 
+    background-color: rgb(185, 48, 48); 
+}
+
+.success {
+    color: white;
+    background-color: rgb(48, 185, 105); 
 }

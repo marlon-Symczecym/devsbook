@@ -47,3 +47,16 @@ if(document.querySelector('.feed-new-input')) {
         }
     });
 }
+
+// Apagar mensagem de erro e sucesso
+let message = document.getElementById('message');
+let classeM = message.className.split(' ');
+let success = document.getElementsByClassName('success');
+
+if(classeM[1] == 'success' || classeM[1] == 'error') {
+    setTimeout(closeMessage, 3000);
+}
+
+function closeMessage() {
+    message.remove(classeM[1]);
+}

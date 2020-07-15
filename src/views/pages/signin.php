@@ -17,7 +17,11 @@
         <form method="POST" action="<?=$base?>/login">
 
             <?php if(!empty($flash)): ?>
-                <div class="flash"><?=$flash?></div>
+                <?php if($_SESSION['message'] == 'success'):?>
+                    <div id="success" class="message success"><?=$flash?></div>
+                <?php elseif($_SESSION['message'] == 'error'): ?>
+                    <div id="error" class="message error"><?=$flash?></div>
+                <?php endif; ?>
             <?php endif; ?>
 
             <input placeholder="Digite seu e-mail" class="input" type="email" name="email" />
@@ -30,5 +34,6 @@
 
         </form>
     </section>
+    <script type="text/javascript" src="<?=$base?>/assets/js/script.js"></script>
 </body>
 </html>
